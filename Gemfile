@@ -27,7 +27,7 @@ gem 'turbolinks'
 group :assets do
   gem 'execjs'
   gem 'therubyracer', :platforms => :ruby
-  gem 'johnson'
+  #gem 'johnson'
 end
 
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
