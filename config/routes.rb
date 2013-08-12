@@ -1,7 +1,16 @@
 ScalarmInformationService::Application.routes.draw do
-  get "storage/list"
-  get "storage/register"
-  get "storage/deregister"
+  get 'db_instances/list'
+  post 'db_instances/register'
+  post 'db_instances/deregister'
+
+  get 'db_config_services/list'
+  post 'db_config_services/register'
+  post 'db_config_services/deregister'
+
+  get 'storage/list'
+  post 'storage/register'
+  post 'storage/deregister'
+
   post 'experiments/register'
   get 'experiments/list'
   post 'experiments/deregister'
@@ -45,7 +54,7 @@ ScalarmInformationService::Application.routes.draw do
   #       get 'recent', on: :collection
   #     end
   #   end
-  
+
   # Example resource route with concerns:
   #   concern :toggleable do
   #     post 'toggle'
