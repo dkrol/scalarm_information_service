@@ -19,5 +19,10 @@ module ScalarmInformationService
     # The default locale is :en and all translations from config/locales/*.rb,yml are auto loaded.
     # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}').to_s]
     # config.i18n.default_locale = :de
+
+    # put your login here
+    config.service_login    = 'scalarm'
+    # put your password here
+    config.service_password = 'trueSecurity'
   end
 end

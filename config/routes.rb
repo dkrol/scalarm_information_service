@@ -1,4 +1,7 @@
 ScalarmInformationService::Application.routes.draw do
+  post 'experiments/register'
+  get 'experiments/list'
+  post 'experiments/deregister'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
