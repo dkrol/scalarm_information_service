@@ -1,6 +1,2 @@
 service_login: scalarm
 service_password: hidden
-
-port: 11300
-key_path: /etc/nginx/server.key
-cert_path: /etc/nginx/server.crt
