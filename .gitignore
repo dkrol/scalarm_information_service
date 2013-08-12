@@ -6,6 +6,9 @@
 
 # Ignore bundler config.
 /.bundle
+/Capfile
+/config/deploy.rb
+/.idea/*
 
 # Ignore the default SQLite database.
 /db/*.sqlite3

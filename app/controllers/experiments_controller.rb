@@ -11,7 +11,7 @@ class ExperimentsController < ApplicationController
       render inline: "Success: '#{address}' registered as Experiment manager"
     else
 
-      render inline: "Failure: '#{address}' is already registered as ExperimentManager", status: 500
+      render inline: "Failure: '#{address}' is already registered as Experiment manager", status: 500
     end
   end
 
@@ -31,7 +31,7 @@ class ExperimentsController < ApplicationController
 
       ExperimentManager.destroy_all(address: address)
 
-      render inline: "Success: '#{address}' deregistered as ExperimentManager"
+      render inline: "Success: '#{address}' deregistered as Experiment manager"
     end
   end
 end

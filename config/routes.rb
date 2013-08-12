@@ -1,4 +1,7 @@
 ScalarmInformationService::Application.routes.draw do
+  get "storage/list"
+  get "storage/register"
+  get "storage/deregister"
   post 'experiments/register'
   get 'experiments/list'
   post 'experiments/deregister'
