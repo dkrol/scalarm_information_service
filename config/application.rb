@@ -1,6 +1,7 @@
 require File.expand_path('../boot', __FILE__)
 
 require 'rails/all'
+require 'yaml'
 
 # Require the gems listed in Gemfile, including any gems
 # you've limited to :test, :development, or :production.
@@ -20,9 +21,7 @@ module ScalarmInformationService
     # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}').to_s]
     # config.i18n.default_locale = :de
 
-    # put your login here
-    config.service_login    = 'scalarm'
-    # put your password here
-    config.service_password = 'trueSecurity'
+    scalarm_config = YAML::load(File.open('config/scalarm.yml'))
+    config.security = { login: scalarm_config['service_login'], password: scalarm_config['service_password'] }
   end
 end
