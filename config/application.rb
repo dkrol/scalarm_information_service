@@ -21,7 +21,7 @@ module ScalarmInformationService
     # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}').to_s]
     # config.i18n.default_locale = :de
 
-    scalarm_config = YAML::load(File.open('config/scalarm.yml'))
+    scalarm_config = YAML::load(File.open(File.join(Rails.root, 'config', 'scalarm.yml')))
     config.security = { login: scalarm_config['service_login'], password: scalarm_config['service_password'] }
   end
 end
