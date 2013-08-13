@@ -26,7 +26,7 @@ class DbInstancesController < ApplicationController
 
     if DbInstance.where(address: address).blank?
 
-      render inline: "Failure: There is no DB instance registered at '#{manager.address}'", status: 500
+      render inline: "Failure: There is no DB instance registered at '#{address}'", status: 500
     else
 
       DbInstance.destroy_all(address: address)

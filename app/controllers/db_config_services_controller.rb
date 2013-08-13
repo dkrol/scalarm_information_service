@@ -26,7 +26,7 @@ class DbConfigServicesController < ApplicationController
 
     if DbConfigService.where(address: address).blank?
 
-      render inline: "Failure: There is no DB config service registered at '#{manager.address}'", status: 500
+      render inline: "Failure: There is no DB config service registered at '#{address}'", status: 500
     else
 
       DbConfigService.destroy_all(address: address)

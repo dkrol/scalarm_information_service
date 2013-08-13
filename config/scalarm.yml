@@ -1,2 +1,5 @@
 service_login: scalarm
 service_password: hidden
+
+service_crt: ./config/scalarm-cert.pem
+service_key: ./config/scalarm-cert-key.pem

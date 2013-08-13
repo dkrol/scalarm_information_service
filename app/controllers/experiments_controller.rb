@@ -26,7 +26,7 @@ class ExperimentsController < ApplicationController
 
     if ExperimentManager.where(address: address).blank?
 
-      render inline: "Failure: There is no Experiment manager registered at '#{manager.address}'", status: 500
+      render inline: "Failure: There is no Experiment manager registered at '#{address}'", status: 500
     else
 
       ExperimentManager.destroy_all(address: address)

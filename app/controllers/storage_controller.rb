@@ -26,7 +26,7 @@ class StorageController < ApplicationController
 
       if StorageManager.where(address: address).blank?
 
-        render inline: "Failure: There is no Storage manager registered at '#{manager.address}'", status: 500
+        render inline: "Failure: There is no Storage manager registered at '#{address}'", status: 500
       else
 
         StorageManager.destroy_all(address: address)
