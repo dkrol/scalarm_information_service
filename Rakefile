@@ -11,9 +11,12 @@ namespace :service do
   desc 'Start the service'
   task :start => :environment do
     config = YAML::load(File.open(File.join(Rails.root, 'config', 'scalarm.yml')))
-    puts "thin start -d --ssl --ssl-key-file #{config['service_key']} --ssl-cert-file #{config['service_crt']} -C config/thin.yml"
 
-    %x[thin start -d --ssl --ssl-key-file #{config['service_key']} --ssl-cert-file #{config['service_crt']} -C config/thin.yml]
+    #command_with_ssl = "thin start -d --ssl --ssl-key-file #{config['service_key']} --ssl-cert-file #{config['service_crt']} -C config/thin.yml"
+    command_without_ssl = "thin start -d -C config/thin.yml"
+    puts command_without_ssl
+
+    %x[#{command_without_ssl}]
   end
 
   desc 'Stop the service'
