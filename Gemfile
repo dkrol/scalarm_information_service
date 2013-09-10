@@ -27,7 +27,6 @@ gem 'turbolinks'
 group :assets do
   gem 'execjs'
   gem 'therubyracer', :platforms => :ruby
-  #gem 'johnson'
 end
 
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
@@ -42,13 +41,11 @@ end
 # gem 'bcrypt-ruby', '~> 3.0.0'
 
 # Use unicorn as the app server
-# gem 'unicorn'
 gem 'thin'
 
 # Use Capistrano for deployment
 group :development do
   gem 'capistrano', group: :development
-  #gem 'capistrano-thin', group: :development
   gem 'rvm-capistrano', group: :development
 end
 
